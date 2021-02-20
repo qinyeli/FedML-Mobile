@@ -33,6 +33,11 @@ android {
         includeInApk true
         includeInBundle true
     }
+
+    applicationVariants.all { variant ->
+        variant.getRuntimeConfiguration().exclude group: 'com.google.code.findbugs', module: 'jsr305'
+        variant.getRuntimeConfiguration().exclude group: 'com.google.guava', module: 'guava'
+    }
 }
 
 dependencies {
