@@ -12,8 +12,8 @@ Android Studio = 4.0.1
 
 
 ## Code Architecture
-fedmlmobile -> fedml-iot-sdk -> fedmlsdk
+fedmlmobile -> fedml_iot_sdk -> fedmlsdk
 
 fedmlsdk: used to communicate Communication with  FedMLServer
-fedml-iot-sdk: Run a Android background Service in sub-process，mplement all of the training logic.
-fedmlmobile: The Host App of fedml-iot-sdk which carries all  capabilites of FedML.
+fedml_iot_sdk: Run a Android background Service in sub-process，mplement all of the training logic.
+fedmlmobile: The Host App of fedml_iot_sdk which carries all  capabilites of FedML.

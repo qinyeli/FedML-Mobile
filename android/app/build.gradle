@@ -122,6 +122,6 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:$lombok_version"
 
     implementation 'org.nanohttpd:nanohttpd:2.2.0'
-    implementation project(':fedml-iot-sdk')
+    implementation project(':fedml_iot_sdk')
 }
 
