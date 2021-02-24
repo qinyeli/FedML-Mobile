@@ -21,9 +21,11 @@ public class DeviceUtils {
     public static String getImei(Context context) {
         TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         @SuppressLint("HardwareIds")
-        String deviceId = telephonyManager.getDeviceId();
-        // android 10 above replace by ANDROID_ID
-        if (TextUtils.isEmpty(deviceId)) {
+        String deviceId;
+        try {
+            deviceId = telephonyManager.getDeviceId();
+        } catch (java.lang.SecurityException e) {
+            // android 10 above replace by ANDROID_ID
             deviceId = Settings.System.getString(
                     context.getContentResolver(), Settings.Secure.ANDROID_ID);
         }

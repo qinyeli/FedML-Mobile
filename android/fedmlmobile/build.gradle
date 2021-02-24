@@ -35,8 +35,8 @@ android {
     }
 
     applicationVariants.all { variant ->
-        variant.getRuntimeConfiguration().exclude group: 'com.google.code.findbugs', module: 'jsr305'
-        variant.getRuntimeConfiguration().exclude group: 'com.google.guava', module: 'guava'
+        variant.getRuntimeConfiguration().exclude group: 'org.nd4j', module: 'protobuf'
+        variant.getRuntimeConfiguration().exclude group: 'org.nd4j', module: 'guava'
     }
 }
 
@@ -87,5 +87,4 @@ dependencies {
     implementation group: 'org.bytedeco', name: 'leptonica', version: '1.78.0-1.5.2', classifier: "android-arm64"
     implementation group: 'org.bytedeco', name: 'leptonica', version: '1.78.0-1.5.2', classifier: "android-x86"
     implementation group: 'org.bytedeco', name: 'leptonica', version: '1.78.0-1.5.2', classifier: "android-x86_64"
-
 }
